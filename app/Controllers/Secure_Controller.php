@@ -88,7 +88,7 @@ class Secure_Controller extends BaseController
      * @return void
      * @noinspection PhpUnused
      */
-    public function getCheckNumeric(): void
+    public function getCheckNumeric(): ResponseInterface|string
     {
         foreach ($this->request->getGet() as $value) {
             if (parse_decimals($value) === false) {
